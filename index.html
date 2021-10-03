@@ -5,89 +5,101 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home | The Argentine Herald</title>
-        <link rel="stylesheet" href="CSS/stylesheet.css">
         <link rel="stylesheet" href="CSS/reset.css">
+        <link rel="stylesheet" href="CSS/stylesheet.css">
     </head>
 
     <body>
-    <!-- HEADER -->
-    <header>
-        <h1>The Argentine Herald</h1>
-    </header>
+        <!-- HEADER -->
+        <header>
+            <h1 class="newspapername">The Argentine Herald</h1>
+        </header>
 
-    <!-- NAVBAR -->
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li><a href="#">Finances</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Opinion</a></li>
-            <li><a href="#">World</a></li>
-            <li><a href="#">More</a></li>
-        </ul>
-    </nav>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <ul>
+                <li>Home</li>
+                <li><a href="#" class="hide">Finances</a></li>
+                <li><a href="#" class="hide">Sports</a></li>
+                <li><a href="#" class="hide">Politics</a></li>
+                <li><a href="#" class="hide">Opinion</a></li>
+                <li><a href="#" class="hide">World</a></li>
+                <li><a href="#">☰</a></li>
+            </ul>
+        </nav>
 
-    <section class="news">
+        <section class="allnews">
 
-        <!-- LEFT CONTENT -->
-        <div class="leftcolumn">
-            <h2>Latest news</h2>
-            <h3>Argentina Formally Recognizes Nonbinary People, a Latin America First</h3>
-            <img src="img/img2.jpg" alt="LGBT Pride March">
-            <p>
-                Argentines no longer have to be identified as female or male on their national identity documents, the latest step in President Alberto Fernández’s push for gender equality.
-            </p>
-            <h3>Lionel Messi and Argentina Beat Brazil in Copa América Final</h3>
-            <img src="img/img3.jpeg" alt="Argentine football team">
-            <p>
-                A star player’s glittering career finally gets the one honor it was missing: a major title with his national team.
-            </p>
-        </div>
-    
-        <!-- CENTER CONTENT -->
-        <div class="centercolumn">
-            <h2>An Economic Lifeline in South America, the Paraná River, Is Shriveling</h2>
-            <img src="img/img4.jpg" alt="Parana River">
-            <p>
-                The continent’s second-largest river is drying up amid the biggest drought in 70 years, upending ecosystems, trade and livelihoods.
-            </p>
-            <h2>In Argentina, a Political Alliance of Convenience Comes Undone</h2>
-            <img src="img/img5.jpg" alt="Alberto Fernandez">
-            <p>
-                Argentina’s vice president, Cristina Fernández de Kirchner, masterminded the plan to elect President Alberto Fernández. Now they’re openly sparring.
-            </p>
-        </div>
-    
-        <!-- RIGHT CONTENT -->
-        <div class="rightcolumn">
-            <h2>Most Read</h2>
-            <h3>Argentine President Offends With Comment: ‘Brazilians Emerged from the Jungle’</h3>
-            <img src="img/img6.jpg" alt="Alberto Fernandez">
-            <p>
-                President Alberto Fernández tried to connect with the Spanish prime minister by highlighting Argentina’s European heritage. Instead he caused offense across much of Latin America.
-            </p>
-            <h3>A Return to Normal? Not for Countries With Covid Surges and Few Vaccines.</h3>
-            <img src="img/img7.jpg" alt="Streets of Argentina nowadays">
-            <p>
-                As nations like the United States prepare for a summer of hugs, gatherings and other activities safe for the vaccinated, nations still scrambling for shots are seeing some of their worst outbreaks.
-            </p>
-        </div>
-    </section>
+            <!-- LEFT CONTENT -->
+            <div class="leftcolumn">
+                <h2>Latest news</h2>
+                    <div class="news">
+                        <h3>Argentina Formally Recognizes Nonbinary People, a Latin America First</h3>
+                        <img src="img/img2.jpg" alt="LGBT Pride March">
+                        <p>
+                            Argentines no longer have to be identified as female or male on their national identity documents, the latest step in President Alberto Fernández’s push for gender equality.
+                        </p>
+                    </div>
+                    <div class="news">
+                        <h3>Lionel Messi and Argentina Beat Brazil in Copa América Final</h3>
+                        <img src="img/img3.jpeg" alt="Argentine football team">
+                        <p>
+                            A star player’s glittering career finally gets the one honor it was missing: a major title with his national team.
+                        </p>
+                    </div>
+            </div>
+        
+            <!-- CENTER CONTENT -->
+            <div class="centercolumn">
+                <div class="news">
+                    <h2>An Economic Lifeline in South America, the Paraná River, Is Shriveling</h2>
+                    <img src="img/img4.jpg" alt="Parana River">
+                    <p>
+                        The continent’s second-largest river is drying up amid the biggest drought in 70 years, upending ecosystems, trade and livelihoods.
+                    </p>
+                </div>
+                <div class="news">
+                    <h2>In Argentina, a Political Alliance of Convenience Comes Undone</h2>
+                    <img src="img/img5.jpg" alt="Alberto Fernandez">
+                    <p>
+                        Argentina’s vice president, Cristina Fernández de Kirchner, masterminded the plan to elect President Alberto Fernández. Now they’re openly sparring.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- RIGHT CONTENT -->
+            <div class="rightcolumn">
+                <h2>Most Read</h2>
+                <div class="news">
+                    <h3>Argentine President Offends With Comment: ‘Brazilians Emerged from the Jungle’</h3>
+                    <img src="img/img6.jpg" alt="Alberto Fernandez">
+                    <p>
+                        President Alberto Fernández tried to connect with the Spanish prime minister by highlighting Argentina’s European heritage. Instead he caused offense across much of Latin America.
+                    </p>
+                </div>
+                <div class="news">
+                    <h3>A Return to Normal? Not for Countries With Covid Surges and Few Vaccines.</h3>
+                    <img src="img/img7.jpg" alt="Streets of Argentina nowadays">
+                    <p>
+                        As nations like the United States prepare for a summer of hugs, gatherings and other activities safe for the vaccinated, nations still scrambling for shots are seeing some of their worst outbreaks.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <section class="newsletter">
-        <h2>Subscribe to our newsletter</h2>
-        <form>
-            <input type= "email" placeholder="Enter Email...">
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
+        <section class="newsletter">
+            <h2>Subscribe to our newsletter</h2>
+            <form>
+                <input type= "email" placeholder="Enter Email...">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
 
 
-    <!-- FOOTER -->
-    <footer>
-        <p>The Argentine Herald &copy; Copyright 2021. All rights reserved.</p>
-    </footer>
+        <!-- FOOTER -->
+        <footer>
+            <p>The Argentine Herald &copy; Copyright 2021. All rights reserved.</p>
+        </footer>
 
     </body>
 </html>
