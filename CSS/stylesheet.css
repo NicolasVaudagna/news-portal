@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/img1.jpg);
+    background-color: whitesmoke;
     background-repeat: no-repeat;
     height: 100px;
     background-size: cover;
@@ -12,18 +12,20 @@ header {
 
 
 header .newspapername {
-    color: #f0f0f0;
+    color: black;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: 150%;
+    font-size: 2em;
 }
 
 nav{
-    background-color: rgb(123, 113, 209);
+    background-color: black;
+    padding-bottom: 1%;
 }
 
 nav li{
     display: inline;
+    padding: 2%;
     font-family: Arial, Helvetica, sans-serif;
     color: #f0f0f0;
     font-size: 80%;
@@ -38,18 +40,60 @@ nav li a{
 }
 
 nav li a :hover{
-    color: burlywood;
+    color: dimgray;
 }
 
 nav .hide{
     display: none;
 }
 
-.allnews {
-    width: 99,9%;
-    background-color: #d3d3d3;
-    border: 1px black solid;
+.advertisements{
+    display: none;
 }
+
+.allnews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 99,9%;
+    background-color: whitesmoke;
+    border: 1px black solid;
+    text-align: justify;
+}
+
+.allnews h2, h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 2%;
+    color: dimgray;
+}
+
+.allnews .categories{
+    text-decoration: underline;
+    margin-left: 2%;
+    color: black;
+    text-align: center;
+}
+
+.allnews p{
+    margin: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+.centercolumn{
+    order: 1;
+}
+
+.leftcolumn{
+    order: 2;
+}
+
+.rightcolumn{
+    order: 3;
+}
+
 
 .news {
     width: 90%;
@@ -60,13 +104,66 @@ nav .hide{
 
 .news img {
     width: 80%;
+    margin: inherit;
 }
 
 .newsletter {
     background-color: darkgray;
-    
+    text-align: center;
+    padding: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 footer{
-    background-color: darksalmon;
+    text-align: center;
+    padding: 10%;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 0.8em;
+}
+
+@media (min-width: 480px){
+
+    header .newspapername{
+        font-size: 3em;
+    }
+
+    nav .hide{
+        display: inline;
+        float: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.5em;
+    }
+
+    .advertisements{
+        display: block;
+    }
+
+    .adh{
+        max-width: 400px;
+        max-height: 200px;
+        float: middle;
+    }
+
+    .allnews p{
+        font-size: 1em;
+    }
+    
+    .allnews h2, .allnews h3{
+        font-size: 1.1em;
+    }
+
+    .allnews .leftcolumn .row, .allnews .rightcolumn .row{
+        display: flex;
+
+    }
+
+   
+
 }
