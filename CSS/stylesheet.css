@@ -55,7 +55,6 @@ nav .hide{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    flex-basis: 99,9%;
     background-color: whitesmoke;
     border: 1px black solid;
     text-align: justify;
@@ -137,18 +136,7 @@ footer{
 
     nav {
         display: flex;
-        justify-content: space-around;
-        font-size: 1.5em;
-    }
-
-    .advertisements{
-        display: block;
-    }
-
-    .adh{
-        max-width: 400px;
-        max-height: 200px;
-        float: middle;
+        font-size: 1.3em;
     }
 
     .allnews p{
@@ -164,6 +152,21 @@ footer{
 
     }
 
+   .allnews .centercolumn{
+       max-width: 75%;
+   }
+
+
+    
+
+}
+
+@media (min-width: 900px){
+
    
 
+
+    .advertisements{
+        display: none;
+    }
 }
