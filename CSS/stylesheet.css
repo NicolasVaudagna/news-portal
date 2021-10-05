@@ -3,10 +3,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: whitesmoke;
-    background-repeat: no-repeat;
     height: 100px;
-    background-size: cover;
-    background-position-y: -10px;
 
 }
 
@@ -39,15 +36,12 @@ nav li a{
     margin: 0.4%;
 }
 
-nav li a :hover{
-    color: dimgray;
-}
+/* no me funciona ???
+    nav li a :hover{
+    color: salmon;
+} */
 
 nav .hide{
-    display: none;
-}
-
-.advertisements{
     display: none;
 }
 
@@ -103,7 +97,7 @@ nav .hide{
 
 .news img {
     width: 80%;
-    margin: inherit;
+    margin: 2% 10%; 
 }
 
 .newsletter {
@@ -113,6 +107,10 @@ nav .hide{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     font-weight: bold;
+}
+
+.advertisements img{
+    width: 100%;
 }
 
 footer{
@@ -130,13 +128,17 @@ footer{
     }
 
     nav .hide{
-        display: inline;
-        float: none;
+       display: inline;
     }
 
-    nav {
+    nav ul{
         display: flex;
-        font-size: 1.3em;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    nav ul li{
+        font-size: 1em;
     }
 
     .allnews p{
@@ -147,26 +149,37 @@ footer{
         font-size: 1.1em;
     }
 
-    .allnews .leftcolumn .row, .allnews .rightcolumn .row{
+    .allnews .leftcolumn, .allnews .rightcolumn{
         display: flex;
-
     }
 
-   .allnews .centercolumn{
-       max-width: 75%;
-   }
+    .allnews .categories{
+        align-self: center;
+    }
 
-
-    
-
-}
 
 @media (min-width: 900px){
 
-   
+    .allnews{
+        flex-direction: row;
+        justify-content: center;
+    }
 
+    .leftcolumn{
+        order: 1;
+        flex-direction: column;
+        width: 20%;
+    }
 
-    .advertisements{
-        display: none;
+    .centercolumn{
+        order: 2;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .rightcolumn{
+        order: 3;
+        flex-direction: column;
+        width: 20%;
     }
 }
