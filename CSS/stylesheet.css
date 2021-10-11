@@ -160,6 +160,10 @@ footer{
 
 @media (min-width: 900px){
 
+    nav .hide2 {
+        display: none;
+    }
+
     .allnews{
         flex-direction: row;
         justify-content: center;
