@@ -6,20 +6,16 @@ header {
     height: 100px;
 
 }
-
-
 header .newspapername {
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 2em;
 }
-
 nav{
     background-color: black;
     padding-bottom: 1%;
 }
-
 nav li{
     display: inline;
     padding: 2%;
@@ -27,7 +23,6 @@ nav li{
     color: #f0f0f0;
     font-size: 80%;
 }
-
 nav li a{
     text-decoration: none;
     color: #f0f0f0;
@@ -35,16 +30,13 @@ nav li a{
     float: right;
     margin: 0.4%;
 }
-
 /* no me funciona ???
     nav li a :hover{
     color: salmon;
 } */
-
 nav .hide{
     display: none;
 }
-
 .allnews {
     display: flex;
     flex-direction: column;
@@ -53,7 +45,6 @@ nav .hide{
     border: 1px black solid;
     text-align: justify;
 }
-
 .allnews h2, h3{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -61,45 +52,36 @@ nav .hide{
     margin: 2%;
     color: dimgray;
 }
-
 .allnews .categories{
     text-decoration: underline;
     margin-left: 2%;
     color: black;
     text-align: center;
 }
-
 .allnews p{
     margin: 2%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
 }
-
 .centercolumn{
     order: 1;
 }
-
 .leftcolumn{
     order: 2;
 }
-
 .rightcolumn{
     order: 3;
 }
-
-
 .news {
     width: 90%;
     border: 2px black solid;
     margin: 5%;
 
 }
-
 .news img {
     width: 80%;
     margin: 2% 10%; 
 }
-
 .newsletter {
     background-color: darkgray;
     text-align: center;
@@ -108,11 +90,9 @@ nav .hide{
     font-size: 1em;
     font-weight: bold;
 }
-
 .advertisements img{
     width: 100%;
 }
-
 footer{
     text-align: center;
     padding: 10%;
@@ -120,74 +100,61 @@ footer{
     color: whitesmoke;
     font-size: 0.8em;
 }
-
 @media (min-width: 480px){
-
     header .newspapername{
         font-size: 3em;
     }
-
     nav .hide{
        display: inline;
     }
-
     nav ul{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
-
     nav ul li{
         font-size: 1em;
     }
-
     .allnews p{
         font-size: 1em;
     }
-    
     .allnews h2, .allnews h3{
         font-size: 1.1em;
     }
-
     .allnews .centercolumn{
         display: flex;
     }
-
     .allnews .leftcolumn, .allnews .rightcolumn{
         display: flex;
     }
-
     .allnews .categories{
         align-self: center;
     }
-
-
 @media (min-width: 900px){
-
     nav .hide2 {
         display: none;
     }
-
     .allnews{
         flex-direction: row;
         justify-content: center;
     }
-
     .leftcolumn{
         order: 1;
         flex-direction: column;
         width: 20%;
     }
-
     .centercolumn{
         order: 2;
         flex-direction: column;
         width: 50%;
     }
-
     .rightcolumn{
         order: 3;
         flex-direction: column;
         width: 20%;
+    }
+    .advertisements{
+        max-width: 80%;
+        padding-left: 10%;
     }
 }
