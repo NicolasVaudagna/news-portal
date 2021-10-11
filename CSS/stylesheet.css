@@ -149,6 +149,10 @@ footer{
         font-size: 1.1em;
     }
 
+    .allnews .centercolumn{
+        display: flex;
+    }
+
     .allnews .leftcolumn, .allnews .rightcolumn{
         display: flex;
     }
