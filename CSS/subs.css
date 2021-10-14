@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 4%;
+
+}
+header .newspapername{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+.sub-header{
+    background-color: black;
+    color: whitesmoke;
+    padding: 2%;
+    text-align: center;
+}
+.sub-header h2{
+    padding: 0.5%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+.sub-header h3{
+    padding: 0.5%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer{
+    text-align: center;
+    padding: 10%;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 0.8em;
+}

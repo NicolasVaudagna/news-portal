@@ -30,10 +30,9 @@ nav li a{
     float: right;
     margin: 0.4%;
 }
-/* no me funciona ???
-    nav li a :hover{
+    nav li a:hover{
     color: salmon;
-} */
+}
 nav .hide{
     display: none;
 }
@@ -132,6 +131,7 @@ footer{
     .allnews .categories{
         align-self: center;
     }
+}
 @media (min-width: 900px){
     nav .hide2 {
         display: none;
