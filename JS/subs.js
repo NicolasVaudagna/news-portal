@@ -43,10 +43,28 @@ window.onload = function(){
         if (e.target.value.length < 8){
             e.target.nextElementSibling.innerHTML = "Password must contain at least 8 characters"
         }
-        else if (!e.target.value.includes())
+        // else if (!e.target.value.includes("1" || "2" || "3" || "4" || "5" || "6" || "6" || "7" || "8" || "9" || "0")){
+        //     e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
+        // }
+        // else if (e.target.value.includes("a" || "b" || "c" || "d" || "e" || "f" || "g" || "h" || "i" || "j" || "k" || "l" || "m" || "n" || "o" || "p" || "q" || "r" || "s" || "t" || "u" || "v" || "w" || "x" || "y" || "z")){
+        //     e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
+        // }  
     }
-
-    
+    password1.addEventListener('focus',validatePassword1)
+    function validatePassword1(e){
+        e.target.nextElementSibling.innerHTML = " "
+    }
+// VALIDATE REPEATPASSWORD
+    repeatPassword.addEventListener('blur',validateRepeatPass)
+    function validateRepeatPass(e){
+        if (!e.target.value = password1){
+            e.target.nextElementSibling.innerHTML = "Password must be the same"
+        }
+    }
+    repeatPassword.addEventListener('focus',validateRepeatPass)
+    function validateRepeatPass(e){
+        e.target.nextElementSibling.innerHTML = " "
+    }
     
 
 
