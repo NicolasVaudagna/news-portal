@@ -82,7 +82,7 @@ window.onload = function(){
         e.target.nextElementSibling.innerHTML = " "
     }
 
-// VALIDATE PHONE NUMBER
+// VALIDATE PHONE NUMBER revisar
     phoneNumber.addEventListener('blur', validatePhoneNumber)
     function validatePhoneNumber(e){
         if (e.target.value.length < 7){
@@ -94,6 +94,23 @@ window.onload = function(){
     }
     phoneNumber.addEventListener('focus', validatePhoneNumber2)
     function validatePhoneNumber2(e){
+        e.target.nextElementSibling.innerHTML = " "
+    }
+// VALIDATE ADDRESS
+    address.addEventListener('blur', validateAddress)
+    function validateAddress(e){
+        if (e.target.value.length < 5){
+            e.target.nextElementSibling.innerHTML = "Address must have at least 5 characters"
+        }
+        else if (!e.target.value.includes(Number)){
+            e.target.nextElementSibling.innerHTML = "Address must contain at least a word and a number"
+        }
+        else if (!e.target.value.includes(" ")){
+            e.target.nextElementSibling.innerHTML = "Address must contain at least two elements"
+        }
+    }
+    address.addEventListener('focus', validateAddress2)
+    function validateAddress2(e){
         e.target.nextElementSibling.innerHTML = " "
     }
 
