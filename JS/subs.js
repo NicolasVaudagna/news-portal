@@ -6,7 +6,7 @@ window.onload = function(){
     var age = document.getElementById('age')
     var phoneNumber = document.getElementById('phone-number')
     var address = document.getElementById('address')
-    var ciry = document.getElementById('city')
+    var city = document.getElementById('city')
     var zipCode = document.getElementById('zip-code')
     var idNumber = document.getElementById('id-number')
 
@@ -58,9 +58,9 @@ window.onload = function(){
 // VALIDATE REPEATPASSWORD
     repeatPassword.addEventListener('blur', validateRepeatPass1)
     function validateRepeatPass1(e){
-        // if ((e.target.value) != (password1.target.value)){
-        //     e.target.nextElementSibling.innerHTML = "Password must be the same"
-        // }
+        if (e.target.value != password1()){
+           e.target.nextElementSibling.innerHTML = "Password must be the same"
+        }
     }
     repeatPassword.addEventListener('focus', validateRepeatPass2)
     function validateRepeatPass2(e){
@@ -115,15 +115,29 @@ window.onload = function(){
         e.target.nextElementSibling.innerHTML = " "
     }
 
-// VALIDATE LOCATION
-    location.addEventListener('blur', validateLocation1)
-    function validateLocation1(e){
-        if (e.target.value.length < 3)
+// VALIDATE CITY
+    city.addEventListener('blur', validateCity1)
+    function validateCity1(e){
+        if (e.target.value.length < 3){
+            e.target.nextElementSibling.innerHTML = "City name must have at least 3 letters"
+        }
+    }
+    city.addEventListener('focus', validateCity2)
+    function validateCity2(e){
+        e.target.nextElementSibling.innerHTML = " "
     }
 
-
-
-
+// VALIDATE ZIP CODE
+    zipCode.addEventListener('blur', validateZipCode1)
+    function validateZipCode1(e){
+        if (e.target.value.length < 3){
+            e.target.nextElementSibling.innerHTML = "Zip Code must have at least 3 letters and/or numbers"
+        }
+    }
+    zipCode.addEventListener('focus', validateZipCode2)
+    function validateZipCode2(e){
+        e.target.nextElementSibling.innerHTML = " "
+    }
 
 
 }
