@@ -20,7 +20,7 @@ window.onload = function(){
             e.target.nextElementSibling.innerHTML = "Name must contain at least 2 words"
         }
     }
-    completeName.addEventListener('focus',validateName1)
+    completeName.addEventListener('focus', validateName1)
     function validateName1(e){
         e.target.nextElementSibling.innerHTML = " "
     }
@@ -32,13 +32,13 @@ window.onload = function(){
             e.target.nextElementSibling.innerHTML = "It must be a valid email"
         }
     }
-    email.addEventListener('focus',validateemail1)
+    email.addEventListener('focus', validateemail1)
     function validateemail1(e){
         e.target.nextElementSibling.innerHTML = " "
     }
    
 // VALIDATE PASSWORD
-    password1.addEventListener('blur',validatePassword)
+    password1.addEventListener('blur', validatePassword)
     function validatePassword(e){
         if (e.target.value.length < 8){
             e.target.nextElementSibling.innerHTML = "Password must contain at least 8 characters"
@@ -50,23 +50,52 @@ window.onload = function(){
         //     e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
         // }  
     }
-    password1.addEventListener('focus',validatePassword1)
+    password1.addEventListener('focus', validatePassword1)
     function validatePassword1(e){
         e.target.nextElementSibling.innerHTML = " "
     }
+
 // VALIDATE REPEATPASSWORD
-    repeatPassword.addEventListener('blur',validateRepeatPass)
+    repeatPassword.addEventListener('blur', validateRepeatPass)
     function validateRepeatPass(e){
-        if (!e.target.value = password1){
-            e.target.nextElementSibling.innerHTML = "Password must be the same"
-        }
+        // if ((e.target.value) != (password1.target.value)){
+        //     e.target.nextElementSibling.innerHTML = "Password must be the same"
+        // }
     }
-    repeatPassword.addEventListener('focus',validateRepeatPass)
+    repeatPassword.addEventListener('focus', validateRepeatPass)
     function validateRepeatPass(e){
         e.target.nextElementSibling.innerHTML = " "
     }
-    
 
+// VALIDATE AGE
+    age.addEventListener('blur', validateAge1)
+    function validateAge1(e){
+        if (e.target.value < 18){
+            e.target.nextElementSibling.innerHTML = "You must be at least 18 years old"
+        }
+        else if (e.target.value != Number.isInteger){
+            e.target.nextElementSibling.innerHTML = "Age must be an integer number"
+        }
+    }
+    age.addEventListener('focus', validateAge2)
+    function validateAge2(e){
+        e.target.nextElementSibling.innerHTML = " "
+    }
+
+// VALIDATE PHONE NUMBER
+    phoneNumber.addEventListener('blur', validatePhoneNumber)
+    function validatePhoneNumber(e){
+        if (e.target.value.length < 7){
+            e.target.nextElementSibling.innerHTML = "Phone number must be at least 7 digits long"
+        }
+        else if (e.target.value.includes("+" || "-" || " ")){
+            e.target.nextElementSibling.innerHTML = "Only numbers are accepted in this gap"
+        }
+    }
+    phoneNumber.addEventListener('focus', validatePhoneNumber2)
+    function validatePhoneNumber2(e){
+        e.target.nextElementSibling.innerHTML = " "
+    }
 
 
 
