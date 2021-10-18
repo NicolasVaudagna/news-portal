@@ -43,11 +43,11 @@ window.onload = function(){
         if (e.target.value.length < 8){
             e.target.nextElementSibling.innerHTML = "Password must contain at least 8 characters"
         }
-        else if (!e.target.value.includes("1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0")){
-            e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
+        else if (!e.target.value.includes( "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0")){
+            e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers1"
         }
-        else if (!e.target.value.includes("a" || "b" || "c" || "d" || "e" || "f" || "g" || "h" || "i" || "j" || "k" || "l" || "m" || "n" || "o" || "p" || "q" || "r" || "s" || "t" || "u" || "v" || "w" || "x" || "y" || "z")){
-           e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
+        else if (!e.target.value.includes( "a" || "b" || "c" || "d" || "e" || "f" || "g" || "h" || "i" || "j" || "k" || "l" || "m" || "n" || "o" || "p" || "q" || "r" || "s" || "t" || "u" || "v" || "w" || "x" || "y" || "z" || "A" || "B" || "C" || "D" || "E" || "F" || "G" || "H" || "I" || "J" || "K" || "L" || "M" || "N" || "O" || "P" || "Q" || "R" || "S" || "T" || "U" || "V" || "W" || "X" || "Y" || "Z")){
+           e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers2"
         }  
     }
     password1.addEventListener('focus', validatePassword2)
@@ -55,13 +55,13 @@ window.onload = function(){
         e.target.nextElementSibling.innerHTML = " "
     }
 
-// VALIDATE REPEATPASSWORD revisar
-    // repeatPassword.addEventListener('blur', validateRepeatPass1)
-    // function validateRepeatPass1(e){
-    //     if (e.target.value != passValue){
-    //        e.target.nextElementSibling.innerHTML = "Password must be the same"
-    //     }
-    // }
+// VALIDATE REPEATPASSWORD
+    repeatPassword.addEventListener('blur', validateRepeatPass1)
+    function validateRepeatPass1(e){
+        if (e.target.value != password1.value){
+           e.target.nextElementSibling.innerHTML = "Password must be the same than in the previous gap"
+        }
+    }
     repeatPassword.addEventListener('focus', validateRepeatPass2)
     function validateRepeatPass2(e){
         e.target.nextElementSibling.innerHTML = " "
@@ -91,9 +91,6 @@ window.onload = function(){
         else if (e.target.value.includes("+" || "-" || " ")){
             e.target.nextElementSibling.innerHTML = "Only numbers are accepted in this gap"
         }
-        // else if (e.target.value.isNaN()){
-        //     e.target.nextElementSibling.innerHTML = "Only numbers are accepted in this gap"
-        // }
     }
     phoneNumber.addEventListener('focus', validatePhoneNumber2)
     function validatePhoneNumber2(e){
