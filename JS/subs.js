@@ -43,22 +43,22 @@ window.onload = function(){
         if (e.target.value.length < 8){
             e.target.nextElementSibling.innerHTML = "Password must contain at least 8 characters"
         }
-        // else if (!e.target.value.includes("1" || "2" || "3" || "4" || "5" || "6" || "6" || "7" || "8" || "9" || "0")){
-        //     e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
-        // }
-        // else if (e.target.value.includes("a" || "b" || "c" || "d" || "e" || "f" || "g" || "h" || "i" || "j" || "k" || "l" || "m" || "n" || "o" || "p" || "q" || "r" || "s" || "t" || "u" || "v" || "w" || "x" || "y" || "z")){
-        //     e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
-        // }  
+        else if (!e.target.value.includes("1" || "2" || "3" || "4" || "5" || "6" || "6" || "7" || "8" || "9" || "0")){
+            e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
+        }
+        else if (!e.target.value.includes("a" || "b" || "c" || "d" || "e" || "f" || "g" || "h" || "i" || "j" || "k" || "l" || "m" || "n" || "o" || "p" || "q" || "r" || "s" || "t" || "u" || "v" || "w" || "x" || "y" || "z")){
+           e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
+        }  
     }
     password1.addEventListener('focus', validatePassword2)
     function validatePassword2(e){
         e.target.nextElementSibling.innerHTML = " "
     }
 
-// VALIDATE REPEATPASSWORD
+// VALIDATE REPEATPASSWORD revisar
     repeatPassword.addEventListener('blur', validateRepeatPass1)
     function validateRepeatPass1(e){
-        if (e.target.value != password1()){
+        if (e.target.value != password1.target.value){
            e.target.nextElementSibling.innerHTML = "Password must be the same"
         }
     }
@@ -97,7 +97,7 @@ window.onload = function(){
         e.target.nextElementSibling.innerHTML = " "
     }
 
-// VALIDATE ADDRESS
+// VALIDATE ADDRESS revisar
     address.addEventListener('blur', validateAddress1)
     function validateAddress1(e){
         if (e.target.value.length < 5){
@@ -127,7 +127,7 @@ window.onload = function(){
         e.target.nextElementSibling.innerHTML = " "
     }
 
-// VALIDATE ZIP CODE
+// VALIDATE ZIP CODE revisar
     zipCode.addEventListener('blur', validateZipCode1)
     function validateZipCode1(e){
         if (e.target.value.length < 3){
@@ -139,5 +139,15 @@ window.onload = function(){
         e.target.nextElementSibling.innerHTML = " "
     }
 
-
+// VALIDATE IDNUMBER
+    idNumber.addEventListener('blur', validateID1)
+    function validateID1(e){
+        if (e.target.value.length < 7 || e.target.value.length > 8){
+            e.target.nextElementSibling.innerHTML = "ID Number must have 7 or 8 digits"
+        }
+    }
+    idNumber.addEventListener('focus', validateID2)
+    function validateID2(e){
+        e.target.nextElementSibling.innerHTML = " "
+    }
 }
