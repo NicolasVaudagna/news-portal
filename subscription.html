@@ -1,81 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscribe me</title>
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/subs.css">
-    <script src="../NewsPortal/JS/subs.js"></script>
-    <script src="../NewsPortal/JS/subs2.js"></script>
-</head>
-<body>
-    <header>
-        <h1 class="newspapername">The Argentine Herald</h1>
-    </header>
-    <section class="sub-header">
-        <h2>Get updated by subscribing to our newsletter</h1>
-        <h3>Do not want to miss any news, updates or notices? Then please fill the form below to subscribe to our newsletter.</h2>
-    </section>
-    <form>
-        <div class="gap">
-            <label for="name">Complete name:</label>
-            <input id="name" type= "text" placeholder="Complete name" required>
-            <span class="error"></span>
-        </div>
-        <div class="gap">
-            <label for="email">Email:</label>
-            <input id="email" type= "Email" placeholder="Enter Email..." required>
-            <span class="error"></span>            
-        </div>
-        <div class="gap">
-            <label for="password">Password:</label>
-            <input id="password" type= "Password" placeholder="Password" required>
-            <span class="error"></span>
-        </div>
-        <div class="gap">
-            <label for="repeat-password">Repeat password:</label>
-            <input id="repeat-password" type= "Password" placeholder="Repeat password" required>
-            <span class="error"></span>
-        </div>
-        <div class="gap">
-            <label for="age">Age:</label>
-            <input id="age" type= "number" placeholder="Age" required>
-            <span class="error"></span>
-        </div>
-        <div class="gap">
-            <label for="phone-number">Phone number:</label>
-            <input id="phone-number" type= "number" placeholder="Phone number" required>
-            <span class="error"></span>
-        </div>
-        <div class="gap">
-            <label for="address">Address:</label>
-            <input id="address" type= "text" placeholder="Address" required>
-            <span class="error"></span>
-        </div>
-        <div class="gap">
-            <label for="location">City:</label>
-            <input id="city" type= "text" placeholder="City" required>
-            <span class="error"></span>
-        </div>
-        <div class="gap">
-            <label for="zip-code">Zip Code:</label>
-            <input id="zip-code" type= "text" placeholder="Zip Code" required>
-            <span class="error"></span>
-        </div>
-        <div class="gap">
-            <label for="id-number">ID Number:</label>
-            <input id="id-number" type= "number" placeholder="ID Number" required>
-            <span class="error"></span>
-        </div>
-        <div class="Submit-button">
-            <button type="submit">Submit</button>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Subscribe me</title>
+        <link rel="stylesheet" href="CSS/reset.css">
+        <link rel="stylesheet" href="CSS/subs.css">
+        <script src="../NewsPortal/JS/subs.js"></script>
+        <script src="../NewsPortal/JS/subs2.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="newspapername">The Argentine Herald</h1>
+        </header>
+        <section class="sub-header">
+            <h2>Get updated by subscribing to our newsletter</h1>
+            <h3>Do not want to miss any news, updates or notices? Then please fill the form below to subscribe to our newsletter.</h2>
+        </section>
+        <form>
+            <div class="gap">
+                <label for="name">Complete name:</label>
+                <input id="name" type= "text" placeholder="Complete name" required>
+                <span class="error"></span>
+            </div>
+            <div class="gap">
+                <label for="email">Email:</label>
+                <input id="email" type= "Email" placeholder="Enter Email..." required>
+                <span class="error"></span>            
+            </div>
+            <div class="gap">
+                <label for="password">Password:</label>
+                <input id="password" type= "Password" placeholder="Password" required>
+                <span class="error"></span>
+            </div>
+            <div class="gap">
+                <label for="repeat-password">Repeat password:</label>
+                <input id="repeat-password" type= "Password" placeholder="Repeat password" required>
+                <span class="error"></span>
+            </div>
+            <div class="gap">
+                <label for="age">Age:</label>
+                <input id="age" type= "number" placeholder="Age" required>
+                <span class="error"></span>
+            </div>
+            <div class="gap">
+                <label for="phone-number">Phone number:</label>
+                <input id="phone-number" type= "number" placeholder="Phone number" required>
+                <span class="error"></span>
+            </div>
+            <div class="gap">
+                <label for="address">Address:</label>
+                <input id="address" type= "text" placeholder="Address" required>
+                <span class="error"></span>
+            </div>
+            <div class="gap">
+                <label for="location">City:</label>
+                <input id="city" type= "text" placeholder="City" required>
+                <span class="error"></span>
+            </div>
+            <div class="gap">
+                <label for="zip-code">Zip Code:</label>
+                <input id="zip-code" type= "text" placeholder="Zip Code" required>
+                <span class="error"></span>
+            </div>
+            <div class="gap">
+                <label for="id-number">ID Number:</label>
+                <input id="id-number" type= "number" placeholder="ID Number" required>
+                <span class="error"></span>
+            </div>
+            <div class="Submit-button">
+                <button id="myBtn" type="submit">Submit</button>
 
+            </div>
+        </form>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+              </div>
         </div>
-    </form>
-    <footer>
-        <p>The Argentine Herald &copy; Copyright 2021. All rights reserved.</p>
-    </footer>
-</body>
+        <footer>
+            <p>The Argentine Herald &copy; Copyright 2021. All rights reserved.</p>
+        </footer>
+    </body>
 </html>

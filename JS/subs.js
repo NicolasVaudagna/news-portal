@@ -151,3 +151,6 @@ window.onload = function(){
         e.target.nextElementSibling.innerHTML = " "
     }
 }
+// VALIDATIONS
+var url = 'http://curso-dev-2021.herokuapp.com/newsletter'
+var parameters = 'name=${completeName.value}&email=${email.value}&password=${password1.value}repeatPassword=${repeatPassword.value}&age=${age.value}&phone=${phoneNumber.value}&address=${address.value}&city=${city.value}&postalCode=${zipCode.value}&id=${idNumber.value}'
