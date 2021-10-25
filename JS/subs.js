@@ -196,8 +196,8 @@ window.onload = function(){
         }
     }
 
-    var url = 'http://curso-dev-2021.herokuapp.com/newsletter?'
-    var parameters = `name=${completeName.value}&email=${email.value}&password=${password1.value}&repeat_password=${repeatPassword.value}age=${age.value}&phone=${phoneNumber.value}&address=${address.value}&city=${city.value}&postal_code=${zipCode.value}&id=${idNumber.value}`
+    var url = "http://curso-dev-2021.herokuapp.com/newsletter?"
+    var parameters = `name=${completeName.value}&email=${email.value}&password=${password1.value}&repeat_password=${repeatPassword.value}&age=${age.value}&phone=${phoneNumber.value}&address=${address.value}&city=${city.value}&postal_code=${zipCode.value}&id=${idNumber.value}`
 
     function sendRequest(url){
         fetch(url)
@@ -226,15 +226,9 @@ window.onload = function(){
             }
         )
     }
-
 // MODAL
   var modal = document.getElementById("myModal");
-  var btn = document.getElementById("myBtn");
   var span = document.getElementsByClassName("close")[0];
-
-  btn.onclick = function() {
-    ;
-  }
 
   span.onclick = function() {
     modal.style.display = "none";
