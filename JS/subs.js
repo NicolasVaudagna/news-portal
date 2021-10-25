@@ -191,7 +191,7 @@ window.onload = function(){
             modal.style.display = "block";
         }
         else{
-            var url = "http://curso-dev-2021.herokuapp.com/newsletter?"
+            var url = "https://curso-dev-2021.herokuapp.com/newsletter?"
             var parameters = `name=${completeName.value}&email=${email.value}&password=${password1.value}&repeat_password=${repeatPassword.value}&age=${age.value}&phone=${phoneNumber.value}&address=${address.value}&city=${city.value}&postal_code=${zipCode.value}&id=${idNumber.value}`
             textSpan[0].nextElementSibling.innerHTML = "Succesfully submitted"
             sendRequest(url+parameters)
