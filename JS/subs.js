@@ -49,8 +49,8 @@ window.onload = function(){
             e.target.nextElementSibling.innerHTML = "Password must contain at least 8 characters"
             e.target.nextElementSibling.classList.add('error')
         }
-        else if (!e.target.value.includes( "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0")){
-            e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers1"
+        else if (!e.target.value.includes("1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0")){
+            e.target.nextElementSibling.innerHTML = "Password must contain letters and numbers"
             e.target.nextElementSibling.classList.add('error')
         }
         else if (!e.target.value.includes( "a" || "b" || "c" || "d" || "e" || "f" || "g" || "h" || "i" || "j" || "k" || "l" || "m" || "n" || "o" || "p" || "q" || "r" || "s" || "t" || "u" || "v" || "w" || "x" || "y" || "z" || "A" || "B" || "C" || "D" || "E" || "F" || "G" || "H" || "I" || "J" || "K" || "L" || "M" || "N" || "O" || "P" || "Q" || "R" || "S" || "T" || "U" || "V" || "W" || "X" || "Y" || "Z")){
@@ -187,18 +187,16 @@ window.onload = function(){
     function validateForm(e){
         e.preventDefault()
         if(errors.length != 0){
-            textSpan[0].nextElementSibling.innerHTML = "Submitting unsuccesfull"
-            modal.style.display = "block"
+            textSpan[0].nextElementSibling.innerHTML = "Submitting unsuccesfull";
+            modal.style.display = "block";
         }
         else{
+            var url = "http://curso-dev-2021.herokuapp.com/newsletter?"
+            var parameters = `name=${completeName.value}&email=${email.value}&password=${password1.value}&repeat_password=${repeatPassword.value}&age=${age.value}&phone=${phoneNumber.value}&address=${address.value}&city=${city.value}&postal_code=${zipCode.value}&id=${idNumber.value}`
             textSpan[0].nextElementSibling.innerHTML = "Succesfully submitted"
             sendRequest(url+parameters)
         }
     }
-
-    var url = "http://curso-dev-2021.herokuapp.com/newsletter?"
-    var parameters = `name=${completeName.value}&email=${email.value}&password=${password1.value}&repeat_password=${repeatPassword.value}&age=${age.value}&phone=${phoneNumber.value}&address=${address.value}&city=${city.value}&postal_code=${zipCode.value}&id=${idNumber.value}`
-
     function sendRequest(url){
         fetch(url)
         .then(
@@ -216,16 +214,44 @@ window.onload = function(){
             modalTitle.innerHTML = 'Your subscription was successful! Here is your data:';
             modalTitle.style.color = 'green';
             modalText.innerHTML = output;
+            uploadStorage("")
             }
         )
         .catch(
             function(err){
                 modalTitle.innerHTML = 'There was an error in your subscription: '
-                modalTitle.style.color = 'red';
                 modalText.innerHTML = err;
+                modalTitle.style.color = 'red';
             }
         )
     }
+// UPLOAD LOCAL STORAGE
+    function uploadStorage(){
+        localStorage.setItem('name', completeName.value)
+        localStorage.setItem('email', email.value)
+        localStorage.setItem('password', password1.value)
+        localStorage.setItem('repeat password', repeatPassword.value)
+        localStorage.setItem('age', age.value)
+        localStorage.setItem('phone number', phoneNumber.value)
+        localStorage.setItem('address', address.value)
+        localStorage.setItem('city', city.value)
+        localStorage.setItem('zip code', zipCode.value)
+        localStorage.setItem('id number', idNumber.value)
+    }
+// CHECK LOCAL STORAGE
+    window.onload = checkStorage
+    function checkStorage(){
+        fnameInput.value = !!localStorage.getItem('name') ? localStorage.getItem('name') : null;
+        emailInput.value = !!localStorage.getItem('email') ? localStorage.getItem('email') : null;
+        passwordInput.value = !!localStorage.getItem('password') ? localStorage.getItem('password') : null;
+        repeatPasswordInput.value = !!localStorage.getItem('repeat password') ? localStorage.getItem('repeat password') : null;
+        ageInput.value = !!localStorage.getItem('age') ? localStorage.getItem('age') : null;
+        phoneInput.value = !!localStorage.getItem('phone number') ? localStorage.getItem('phone number') : null;
+        addressInput.value = !!localStorage.getItem('address') ? localStorage.getItem('address') : null;
+        cityInput.value = !!localStorage.getItem('city') ? localStorage.getItem('city') : null;
+        pCodeInput.value = !!localStorage.getItem('zip code') ? localStorage.getItem('zip code') : null;
+        idInput.value = !!localStorage.getItem('id number') ? localStorage.getItem('id number') : null;
+    } 
 // MODAL
   var modal = document.getElementById("myModal");
   var span = document.getElementsByClassName("close")[0];
